@@ -2,14 +2,14 @@ import os
 import sys
 import shutil
 path = os.path.dirname(os.path.realpath(__file__))
-dirs = os.listdir(path+"/dataset_resized/")
+dirs = os.listdir(path+"/dataset/")
 train_path = path+"/data/train/"
 val_path = path+"/data/validation/"
 def resize():
     for item in dirs:
-        file_path = path+"/dataset_resized/"+item
+        file_path = path+"/dataset/"+item
         x = len(os.listdir(file_path))
-        train_x = int(0.9*x)
+        train_x = int(0.8*x)
         validation_x = x-train_x
         tr = 0
         val = 0

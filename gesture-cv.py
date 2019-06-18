@@ -18,9 +18,9 @@ while True:
 	num_of_frames+=1
 	cv2.imshow('frame',frame)
 	cv2.imshow("roi", roi)
-	if num_of_frames>50:
-		cv2.imwrite(dir_path+"/data_new/6/"+str(i)+'.jpg',roi)
-		i+=1
+	# if num_of_frames>50:
+	# 	cv2.imwrite(dir_path+"/data_new/6/"+str(i)+'.jpg',roi)
+	# 	i+=1
 	
 	if cv2.waitKey(1) & 0xFF==ord('q'):
 		break
