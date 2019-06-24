@@ -16,7 +16,7 @@ def resize():
         for filename in os.listdir(file_path):
             if tr <= train_x:
                 newPath = shutil.copy(file_path+"/"+filename, train_path+item)
-                tr=tr+1
+                tr=tr+1 
             elif val <= validation_x:
                 newPath  = shutil.copy(file_path+"/"+filename, val_path+item)
                 val=val+1
