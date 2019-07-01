@@ -34,14 +34,6 @@ while True:
 	if num_of_frames%50==0:
 		resized = cv2.resize(roi,(IMG_SIZE,IMG_SIZE))
 		print(np.argmax(loaded_model.predict(resized.reshape(1,IMG_SIZE,IMG_SIZE,3)))+1)
-
-    # if num_of_frames%50==0:
-    #     resized = cv2.resize(roi,(IMG_SIZE,IMG_SIZE))
-    #     print(np.argmax(loaded_model.predict(resized.reshape(1,IMG_SIZE,IMG_SIZE,3)))+1)
-
-	# if num_of_frames>50:
-	# 	cv2.imwrite(dir_path+"/data_new/6/"+str(i)+'.jpg',roi)
-	# 	i+=1
 	
 	if cv2.waitKey(1) & 0xFF==ord('q'):
 		break
